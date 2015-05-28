@@ -130,6 +130,11 @@ function love.update(dt)
     player.jumpSize = 0
     player.jump = false
   end
+  -- так лучьше!
+  if player.jumpSize == 15 then
+    player.jump = false
+    
+    end
   
   if not player.coll.left and kb.isDown("a") then
     player.x = player.x - unit
